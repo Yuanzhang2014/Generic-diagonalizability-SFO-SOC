@@ -1,4 +1,4 @@
-%A naive iterative algorithm to determine a feasible solution to P1 for general systems
+%Algorithm 2: A naive iterative algorithm to determine a feasible solution to P1 for general systems
 clear;
 clc;
 
