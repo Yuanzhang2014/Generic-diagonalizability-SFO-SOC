@@ -2,7 +2,7 @@
 clear;
 clc;
 
-%Example 5 in the manuscript
+%Example in the manuscript
 %A = [0 0 0 0 0 0;1 0 0 0 0 0;0 1 0 0 0 0;0 0 0 0 0 0;0 1 0 1 0 0;0 1 0 0 0
 %0];
 %F = [0 1 1 1 0 0]
