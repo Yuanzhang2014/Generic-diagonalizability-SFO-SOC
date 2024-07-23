@@ -2,10 +2,11 @@
 % IfDiagonalizable=1; otherwise, IfDiagonalizable=0.
 % Your Matlab version should support optimproblem and optimvar
 %A = input('Please enter matrix A:\n');
+function IfDiagonalizable=Check_Generic_Diagonalizability(a)
 %For example: 
-a=zeros(5,5);
-a(1,2)=1;a(2,4)=1;a(4,2)=1;a(3,4)=1;a(5,4)=1;
-a(3,1)=1;
+%a=zeros(5,5);
+%a(1,2)=1;a(2,4)=1;a(4,2)=1;a(3,4)=1;a(5,4)=1;
+%a(3,1)=1;
 A=a;
 IfDiagonalizable =0;
     A_sys = A';
@@ -19,7 +20,7 @@ IfDiagonalizable =0;
    % generic_rank = compute_generic_rank(A_sys);
 %disp(['The generic rank of the structured matrix is: ' num2str(generic_rank)]); 
 
-%计算MWMM(A)
+%璁＄畻MWMM(A)
     A_cost = zeros(n);
     for i = 1:n
         for j = 1:n
@@ -38,9 +39,9 @@ IfDiagonalizable =0;
     %disp(['The MWMM of the structured matrix is: ' num2str(min_totalcost)]);
     if generic_rank == n - min_totalcost
     IfDiagonalizable =1;
-     disp('yes');  
+     disp('Generically diagonalizable');  
     else
-        disp('no');
+     disp('Not Generically diagonalizable');
     end
    
     
@@ -72,5 +73,6 @@ function [matching, total_cost] = min_cost_max_matching(cost_matrix)
     else
         error('Solution failed');
     end
+end
 end
     
