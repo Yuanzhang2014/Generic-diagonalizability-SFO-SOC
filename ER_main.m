@@ -1,3 +1,4 @@
+% Generate Erd¨os-R´enyi (ER) random networks and empirically count the ratio of structurally diagonalizable ones.
 clear;
 clc;
 
@@ -23,12 +24,12 @@ K = zeros(2,length(Q(1,:)));
     flag = 0;
     s = log(Q(1,nl))/Q(1,nl);
     for i = 1:q
-    A = ER_network(Q(1,nl),s); % 生成 ER 随机网络
-% 可视化邻接矩�?
+    A = ER_network(Q(1,nl),s); % ç”Ÿæˆ ER éšæœºç½‘ç»œ
+% å¯è§†åŒ–é‚»æŽ¥çŸ©é˜?
 %G = digraph(A);
 %plot(G);
 
-% 计算泛秩
+% è®¡ç®—æ³›ç§©
     A_sys = A';
     generic_rank = rank(A_sys .* rand(Q(1,nl)));
    % A1 = ones(Q(1,nl)) - A_sys;
@@ -38,7 +39,7 @@ K = zeros(2,length(Q(1,:)));
    % generic_rank = compute_generic_rank(A_sys);
 %disp(['The generic rank of the structured matrix is: ' num2str(generic_rank)]); 
 
-%计算MWMM(A)
+%è®¡ç®—MWMM(A)
     A_cost = zeros(Q(1,nl));
     for i = 1:Q(1,nl)
         for j = 1:Q(1,nl)
