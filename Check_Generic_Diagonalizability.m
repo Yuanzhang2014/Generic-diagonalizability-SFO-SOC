@@ -3,7 +3,7 @@
 % Your Matlab version should support optimproblem and optimvar
 %A = input('Please enter matrix A:\n');
 function IfDiagonalizable=Check_Generic_Diagonalizability(a)
-%For example: 
+%Example: 
 %a=zeros(5,5);
 %a(1,2)=1;a(2,4)=1;a(4,2)=1;a(3,4)=1;a(5,4)=1;
 %a(3,1)=1;
