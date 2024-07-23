@@ -1,16 +1,16 @@
 function A = ER_network(n,p)
-% ER_network - 生成 ER 随机网络
-% n - 网络节点数
-% p - 边的概率
+% ER_network - Generate an ER random network
+% n - Number of network nodes
+% p - Probability of edges
  
-A = zeros(n); % 初始化邻接矩阵为全零矩阵
+A = zeros(n); % Initialize the adjacency matrix as an all-zero matrix
  
 for i = 1:n
     for j = 1:n
-        if rand() <= p % 如果随机数小于等于概率 p，则在节点 i 和 j 之间添加一条边
+        if rand() <= p %If the random number is less than or equal to the probability p, add an edge between nodes i and j
             A(i,j) = 1;
         end
     end
 end
 
-end %ER网络生成
+end 
