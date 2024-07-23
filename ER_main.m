@@ -2,8 +2,8 @@
 clear;
 clc;
 
-q = 10;
-Q = zeros (2,10);
+q = 10;%Round
+Q = zeros (2,10);%The first line stores the node step size, and the second line can be used to store the required probabilities
 Q(1,1) = 100;
 Q(1,2) = 150;
 Q(1,3) = 200;
@@ -24,22 +24,17 @@ K = zeros(2,length(Q(1,:)));
     flag = 0;
     s = log(Q(1,nl))/Q(1,nl);
     for i = 1:q
-    A = ER_network(Q(1,nl),s); % ç”Ÿæˆ ER éšæœºç½‘ç»œ
-% å¯è§†åŒ–é‚»æŽ¥çŸ©é˜?
+    A = ER_network(Q(1,nl),s); % Generate an ER random network
+    
+% Visualize the adjacency matrix
 %G = digraph(A);
 %plot(G);
 
-% è®¡ç®—æ³›ç§©
+% Compute generic_rank
     A_sys = A';
     generic_rank = rank(A_sys .* rand(Q(1,nl)));
-   % A1 = ones(Q(1,nl)) - A_sys;
-   % [min_matching1, min_totalcost1] = min_cost_max_matching(A1);
-   % generic_rank = Q(1,nl) - min_totalcost1;
-    %generic_rank = hopcroftKarp(A_sys);
-   % generic_rank = compute_generic_rank(A_sys);
-%disp(['The generic rank of the structured matrix is: ' num2str(generic_rank)]); 
-
-%è®¡ç®—MWMM(A)
+    
+%Compute MWMM(A)
     A_cost = zeros(Q(1,nl));
     for i = 1:Q(1,nl)
         for j = 1:Q(1,nl)
