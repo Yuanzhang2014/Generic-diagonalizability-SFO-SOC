@@ -11,7 +11,7 @@ Algorithm 2: A naive iterative algorithm to determine a feasible solution to P1 
 
 Algorithm 3 : A weighted maximum matching based algorithm for a feasible solution to P1 for general systems.
 
-Algorithm 4:  A weighted maximum flow based algorithm to find an optimal solution to P2 in generically
+Algorithm 4:  A weighted maximum flow based algorithm to find an optimal solution to P2 in generically
 diagonalizable systems.
 
 ER_main: Generate Erd¨os-R´enyi (ER) random networks and empirically count the ratio of structurally diagonalizable ones.
