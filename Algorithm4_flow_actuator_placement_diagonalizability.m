@@ -1,3 +1,4 @@
+%Algorithm 4: A weighted maximum flow-based algorithm to find an optimal solution to P2 in generically diagonalizable systems.
 clear;
 clc;
 %Example
