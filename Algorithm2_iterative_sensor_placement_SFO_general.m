@@ -29,9 +29,11 @@ C = C(2:size(C,1),:);
 
 %Calculate the grank of the observability matrix. The randomized algorithm gives the right answer with probability one.
 function [grank] = gr_O(A,C)
+p=size(A,1);
+q=size(C,1);
+A=rand(p,p).*A;
+C=rand(q,p).*C;
 O = obsv(A,C);
-p = size(O,1);
-q = size(O,2);
-grank = rank(O.*rand(p,q));
+grank = rank(O);
 end
     
